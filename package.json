@@ -1,0 +1,26 @@
+{
+  "name": "canadian-recalls-and-alerts",
+  "version": "1.1.0",
+  "description": "This application uses the government API to return information about the latest recalls and safety alerts.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socd06/recalls.git"
+  },
+  "keywords": [
+    "canada",
+    "api",
+    "javascript",
+    "web",
+    "app"
+  ],
+  "author": "Carlos Salgado",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/socd06/recalls/issues"
+  },
+  "homepage": "https://github.com/socd06/recalls#readme"
+}
