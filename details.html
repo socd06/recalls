@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+  <meta charset="utf-8">
+  <title>Canadian Recalls and Safety Alerts Details</title>
+  <link rel="stylesheet" href="css/style.css">
+
+  <script src="js/jquery.js"></script>
+
+</head>
+
+<body>
+  <h1>Canadian Recalls and Safety Alerts</h1>
+  <p></p>
+  <br>
+
+  <h3> Recall Details by ID </h3>
+
+
+<br>
+
+<!-- This element will get populated by recall Id numbers -->
+<div id ="divList">
+<!-- This gets populated by the script below -->
+<form id="idList">
+  <label for="menu">Choose an ID:</label>
+  <select id="menu" name="menu">
+    <option value="default">Click to load options</option>
+  </select>
+</form>
+</div>
+
+<!-- This element is where the recall details are put after calling the API -->
+<div id = "details"></div>
+
+<script src="js/id-query.js"></script>
+
+</body>
