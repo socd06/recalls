@@ -1,5 +1,6 @@
 {
   "name": "canadian-recalls-and-alerts",
+  "author": "Carlos Salgado",
   "version": "1.1.0",
   "description": "This application uses the government API to return information about the latest recalls and safety alerts.",
   "main": "index.js",
