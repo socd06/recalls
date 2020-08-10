@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Canadian Recalls and Safety Alerts</title>
+</head>
+
+<body>
+
+  <h1>Recent Canadian Recalls and Safety Alerts</h1>
+  <br>
+
+  <h2>Most Recent 15 Recall Titles:</h2>
+
+  <div id="titles"></div>
+
+  <script>
+    // div element variable
+    var dataContainer = document.getElementById("titles");
+
+    var ourRequest = new XMLHttpRequest();
+
+    var langValue = "en";
+
+    var url = "https://healthycanadians.gc.ca/recall-alert-rappel-avis/api/recent/" + langValue;
+    //debugging
+    console.log(url);
+    ourRequest.open("GET",url);
+    ourRequest.onload = function(){
+      var ourData = JSON.parse(ourRequest.responseText);
+      var allData = ourData.results.ALL;
+      //debugging
+      console.log(allData);
+      for (i=0; i<allData.length;i++){
+        // add date timestamp
+        const dateStamp = JSON.stringify(allData[i].date_published);
+        // UNIX timestamp is in milliseconds
+        const milliSeconds = dateStamp * 1000;
+        // Create a dateObject
+        const dateObject = new Date(milliSeconds);
+        // convert dateObject to local date
+        const canadianDate = dateObject.toLocaleString('ca-EN');
+        // search for the first comma in the date
+        var n = canadianDate.search(",");
+        // only display date up to n to prevent repetitiveness
+        // (all dates have the same time hour 20:00)
+        logDate = canadianDate.slice(0,n)
+        // use to debug
+        //console.log(logDate);
+        dataContainer.insertAdjacentHTML("beforeend",logDate+"<br>");
+        var title = JSON.stringify(allData[i].title);
+        var titleString = title.slice(1,title.length-1) + "<br><br>"
+        dataContainer.insertAdjacentHTML("beforeend",titleString);
+        //for debugging
+        //console.log(allData[i].title);
+      }
+    }
+    ourRequest.send();
+
+  </script>
+
+  <script src="../js/jquery.js"></script>
+
+</body>
