@@ -7,7 +7,6 @@ var langList = document.getElementById("language");
 // Get form from html
 const form = document.getElementById('form');
 
-// form.addEventListener("submit", function(){
 langList.addEventListener("click", function(){
   var langValue = langList.options[langList.selectedIndex].value;
   // debugging
