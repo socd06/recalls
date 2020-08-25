@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Search Canadian Recalls and Safety Alerts</title>
+</head>
+
+<body>
+
+  <h1>Search Canadian Recalls and Safety Alerts</h1>
+
+  <form id="textForm">
+    <label for="searchText">Search recalls</label>
+    <input type="text" id="searchText" onchange="doSearch()"
+    oninput="doSearch()" name="searchText"><br>
+  </form>
+
+  <br>
+
+  <form id="category"><label for="category">Select a Category</label>
+    <select name="catDrop" id="catDrop" onchange="doSearch()">
+    <option value="ALL">All</option>
+    <option value="FOOD">Food</option>
+    <option value="VEHICLES">Vehicles</option>
+    <option value="HEALTH">Health</option>
+    <option value="CPS">CPS</option>
+    </select>
+  </form>
+
+
+
+  <script src="../js/jquery.js"></script>
+  <script src="script.js"></script>
+
+<div id="responses"></div>
+
+</body>
