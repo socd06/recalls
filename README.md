@@ -1,9 +1,8 @@
 # recalls
-Canadian recalls and Safety Alerts web app using JavaScript, jQuery and government API. [Go to Website](http://34.229.69.254/).
+Canadian recalls and Safety Alerts web app using JavaScript, jQuery and government API.
 
 # web app
-This webapp is hosted at AWS using an S3 bucket, an EC2 instance and a Linux 2 machine.
-[Go to Website](http://34.229.69.254/).
+This webapp was hosted at AWS using an S3 bucket, an EC2 instance and a Linux 2 machine. **Temporarily offline.**
 
 # css
 Simple CSS style
